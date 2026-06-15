@@ -1,35 +1,35 @@
-// Edit this array to update the project cards on the homepage.
-// To add a new project: copy one object, change the text, then add it to the array.
-// To keep the first version elegant, show only your 3 strongest projects.
+// Edit array ini untuk mengubah kartu proyek di homepage.
+// Untuk menambah proyek: copy satu object, ubah teksnya, lalu masukkan ke array.
+// Agar versi awal tetap elegan, tampilkan 3 proyek terkuat saja.
 const featuredProjects = [
   {
-    title: "UAV Mapping for Infrastructure Planning",
+    title: "UAV Mapping untuk Perencanaan Infrastruktur",
     year: "2025",
     location: "East Kalimantan, Indonesia",
     type: "UAV Mapping",
     summary:
-      "Aerial mapping workflow for site planning, terrain interpretation, and engineering documentation.",
-    deliverables: ["Orthomosaic", "DTM/DSM", "Contour lines", "Site documentation"],
+      "Workflow pemetaan udara untuk perencanaan area, interpretasi terrain, dan dokumentasi engineering.",
+    deliverables: ["Orthomosaic", "DTM/DSM", "Garis kontur", "Dokumentasi area"],
     tools: ["UAV", "GNSS", "Agisoft Metashape", "QGIS", "AutoCAD"]
   },
   {
-    title: "Topographic Survey for Development Area",
+    title: "Survey Topografi Area Pengembangan",
     year: "2024",
     location: "Indonesia",
-    type: "Topographic Survey",
+    type: "Survey Topografi",
     summary:
-      "Ground survey and elevation data preparation for design and construction planning.",
-    deliverables: ["Control points", "Spot heights", "Contour map", "CAD-ready drawing"],
+      "Survey lapangan dan persiapan data elevasi untuk kebutuhan desain serta perencanaan konstruksi.",
+    deliverables: ["Titik kontrol", "Spot height", "Peta kontur", "Gambar CAD-ready"],
     tools: ["GNSS", "Total Station", "AutoCAD Civil 3D", "QGIS"]
   },
   {
-    title: "Spatial Data Processing & Mapping",
+    title: "Pengolahan Data Spasial dan Pemetaan",
     year: "2024",
     location: "Remote / Office-based",
-    type: "Spatial Data Processing",
+    type: "Pengolahan Spasial",
     summary:
-      "Geospatial data processing, map production, and spatial visualization for technical reporting.",
-    deliverables: ["Thematic maps", "Processed spatial layers", "Layout maps", "Report figures"],
+      "Pengolahan data geospasial, produksi peta, dan visualisasi spasial untuk kebutuhan laporan teknis.",
+    deliverables: ["Peta tematik", "Layer spasial terolah", "Layout peta", "Figur laporan"],
     tools: ["QGIS", "ArcGIS", "Excel", "CAD"]
   }
 ];
@@ -67,12 +67,12 @@ function renderProjects() {
               aria-controls="project-detail-${index}"
               data-project-toggle
             >
-              View details
+              Lihat detail
             </button>
             <div class="project-detail" id="project-detail-${index}" data-project-detail hidden>
-              <h4>Location</h4>
+              <h4>Lokasi</h4>
               <p>${project.location}</p>
-              <h4>Deliverables</h4>
+              <h4>Output</h4>
               <ul class="tag-list">${createTags(project.deliverables)}</ul>
               <h4>Tools</h4>
               <ul class="tag-list">${createTags(project.tools)}</ul>
@@ -84,8 +84,8 @@ function renderProjects() {
     .join("");
 }
 
-// This keeps the project cards compact at first.
-// When a visitor clicks "View details", the script opens only that card's detail panel.
+// Fungsi ini menjaga kartu proyek tetap ringkas saat pertama dibuka.
+// Saat pengunjung klik "Lihat detail", script membuka panel detail pada kartu tersebut.
 function initProjectToggles() {
   document.querySelectorAll("[data-project-card]").forEach((card) => {
     const button = card.querySelector("[data-project-toggle]");
@@ -98,7 +98,7 @@ function initProjectToggles() {
       const nextExpanded = !isExpanded;
 
       button.setAttribute("aria-expanded", String(nextExpanded));
-      button.textContent = nextExpanded ? "Hide details" : "View details";
+      button.textContent = nextExpanded ? "Tutup detail" : "Lihat detail";
       detail.hidden = !nextExpanded;
     });
   });
