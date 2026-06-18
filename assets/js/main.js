@@ -155,8 +155,14 @@ const featuredProjects = [
     imageAlt: "",
     websiteUrl: "https://orbit.infomapgeosurvey.com/",
     summary:
-      "Web yang dibangun untuk menampilkan contoh produk pemetaan, untuk marketing dan edukasi kepada calon klien tentang layanan pemetaan yang ditawarkan.",
-    deliverables: ["Digital Elevation Model (DEM)", "Orthomosaic", "Kontur"],
+      "Web yang dibangun untuk menampilkan contoh produk pemetaan, sebagai marketing dan edukasi kepada calon klien tentang layanan pemetaan yang ditawarkan.",
+    deliverables: [
+      "Digital Elevation Model (DEM)",
+      "Orthomosaic",
+      "Kontur",
+      "Point Cloud",
+      "Digital Twin",
+    ],
     tools: ["Three.js", "Bootstrap", "CesiumJS", "PotreeJS"],
   },
 ];
