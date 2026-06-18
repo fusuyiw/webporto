@@ -206,6 +206,42 @@
     @apply grid grid-cols-1 gap-4 lg:grid-cols-3;
   }
 
+  .tools-panel {
+    @apply border p-5 md:p-7;
+    border-color: var(--line);
+    background: rgba(8, 13, 20, 0.86);
+  }
+
+  .tools-label {
+    @apply mb-5 text-xs font-extrabold uppercase tracking-[0.14em];
+    color: var(--accent);
+  }
+
+  .tools-grid {
+    @apply grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4;
+  }
+
+  .tool-item {
+    @apply flex min-h-24 flex-col items-center justify-center gap-3 border p-3 text-center transition-colors duration-200;
+    border-color: var(--line);
+    background: rgba(255, 255, 255, 0.015);
+  }
+
+  .tool-item:hover {
+    border-color: rgba(56, 213, 255, 0.55);
+    background: rgba(56, 213, 255, 0.05);
+  }
+
+  .tool-mark {
+    @apply grid h-10 min-w-10 place-items-center border px-2 text-xs font-extrabold tracking-[0.06em];
+    border-color: rgba(56, 213, 255, 0.36);
+    color: var(--accent);
+  }
+
+  .tool-item strong {
+    @apply text-[0.82rem] leading-tight;
+  }
+
   .project-visual {
     @apply min-h-24 border-b;
     border-color: var(--line);
@@ -339,6 +375,26 @@
 
   .contact-panel h2 {
     @apply mb-0 max-w-[720px];
+  }
+
+  .social-links {
+    @apply flex flex-wrap gap-3;
+  }
+
+  .social-links a {
+    @apply grid h-12 w-12 place-items-center border transition-colors duration-200;
+    border-color: var(--line);
+    color: var(--muted);
+  }
+
+  .social-links a:hover,
+  .social-links a:focus-visible {
+    border-color: rgba(56, 213, 255, 0.65);
+    color: var(--accent);
+  }
+
+  .social-links svg {
+    @apply h-5 w-5 fill-current;
   }
 
   .site-footer {
