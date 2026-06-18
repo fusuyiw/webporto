@@ -147,17 +147,17 @@ const featuredProjects = [
     ],
   },
   {
-    title: "Pemetaan Topografi LiDAR",
+    title: "Web Sampel Proyek",
     year: "2026",
     location: "Bulungan, Kaltara",
-    type: "| Drone Pilot & Data Processor",
+    type: "| Web Developer",
     imageUrl: "assets/images/8.webp",
     imageAlt: "",
-    websiteUrl: "",
+    websiteUrl: "https://orbit.infomapgeosurvey.com/",
     summary:
-      "Paket pekerjaan survei topografi menggunakan teknologi LiDAR untuk menghasilkan data elevasi yang akurat dan detail, mendukung perencanaan eksplorasi sumber daya mineral di wilayah Bulungan.",
+      "Web yang dibangun untuk menampilkan contoh produk pemetaan, untuk marketing dan edukasi kepada calon klien tentang layanan pemetaan yang ditawarkan.",
     deliverables: ["Digital Elevation Model (DEM)", "Orthomosaic", "Kontur"],
-    tools: ["CHC X500", "LiDAR AA10", "Global Mapper", "Agisoft Metashape"],
+    tools: ["Three.js", "Bootstrap", "CesiumJS", "PotreeJS"],
   },
 ];
 
